@@ -179,9 +179,8 @@ h3 {
   }
 
   .container {
-    min-height: 100vh;
+    min-height: 120vh;
     min-width: 23.438rem;
-  
     width: 100%;
     position: relative;
     display: flex;
@@ -207,7 +206,7 @@ h3 {
   .karma {
     position: absolute;
     border-top: 4px solid var(--Orange);
-    top: 58%;
+    top: 38%;
   }
 
   .calculator {
