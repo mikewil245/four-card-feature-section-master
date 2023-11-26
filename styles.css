@@ -1,0 +1,231 @@
+:root {
+  /* Primary Colors*/
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /*Neutral colors */
+  --VeryDarkBlue: #4c4e61;
+  --GrayishBlue: hsl(229, 6%, 66%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+
+  /*Font and Font Weight*/
+  --Poppins: "Poppins", sans-serif;
+  --Two-hundred: 200;
+  --Four-hundred: 400;
+  --Six-hundred: 600;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Set body defaults */
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  background-color: var(--VeryLightGray);
+  /* center demo content on the screen */
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+header {
+  width: 21.875rem;
+  text-align: center;
+  margin-top: 4em;
+}
+
+h3 {
+  color: var(--VeryDarkBlue);
+}
+
+.hero-title {
+  color: var(--GrayishBlue);
+  font-size: 1.7rem;
+  margin-bottom: 0.5em;
+  font-weight: 100;
+}
+
+.custom-header-text {
+  color: var(--VeryDarkBlue);
+  font-weight: var(--Six-hundred);
+}
+
+.hero-paragraph {
+  color: var(--GrayishBlue);
+  font-size: 1rem;
+  width: 95%;
+  font-weight: 300;
+}
+
+.box-paragraph {
+  color: var(--GrayishBlue);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.container {
+  min-height: 170vh;
+  min-width: 23.438rem;
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.box {
+  background-color: white;
+  max-width: 18rem;
+  min-width: 19.5rem;
+  min-height: 13.12rem;
+  border-radius: 2.5%;
+  padding-top: 1em;
+  padding-left: 1.88em;
+  padding-right: 1em;
+  box-shadow: 0px 10px 13px 5px hsl(0, 0%, 83%);
+}
+
+.supervisor {
+  width: 50%;
+  border-top: 4px solid var(--Cyan);
+  position: relative;
+}
+
+.team-builder {
+  border-top: 4px solid var(--Red);
+  position: relative;
+}
+
+.karma {
+  position: relative;
+  border-top: 4px solid var(--Orange);
+}
+
+.calculator {
+  position: relative;
+  border-top: 4px solid var(--Blue);
+}
+
+.all-logo-position {
+  min-width: 3.5rem;
+  max-width: 3.5rem;
+  width: 15%;
+  position: absolute;
+  top: 66%;
+  left: 76%;
+  bottom: 1px;
+}
+
+@media (min-width: 62.5rem) {
+
+    body{ gap: 0em;}
+  
+    header {
+    width: 31.25rem;
+    text-align: center;
+    margin-top: 4em;
+  }
+
+  .hero-paragraph {
+    color: var(--GrayishBlue);
+    width: 100%;
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  .hero-title {
+    color: var(--GrayishBlue);
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    font-weight: 100;
+  }
+
+  .container {
+    min-height: 160vh;
+    min-width: 23.438rem;
+  
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .supervisor {
+    width: 50%;
+    border-top: 4px solid var(--Cyan);
+    position: absolute;
+    left: 80px;
+    top: 180px;
+  }
+
+  .team-builder {
+    border-top: 4px solid var(--Red);
+    position: absolute;
+    top: 50px;
+  }
+
+  .karma {
+    position: absolute;
+    border-top: 4px solid var(--Orange);
+    top: 35%;
+  }
+
+  .calculator {
+    position: absolute;
+    border-top: 4px solid var(--Blue);
+    right: 80px;
+    top: 180px;
+  }
+
+  .box {
+    background-color: white;
+    max-width: 22rem;
+    min-width: 19.5rem;
+    min-height: 15.12rem;
+    border-radius: 2.5%;
+    padding-top: 1em;
+    padding-left: 1.88em;
+    padding-right: 1em;
+    box-shadow: 0px 10px 13px 5px hsl(0, 0%, 83%);
+  }
+}
