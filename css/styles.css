@@ -147,6 +147,7 @@ body {
   .card-feature__grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    gap: 1.2rem;
     grid-template-areas: "start mid1 end" "start mid2 end";
   }
   .card-feature__grid .card-feature__item--team-builder {
