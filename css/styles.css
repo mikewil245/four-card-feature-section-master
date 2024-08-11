@@ -1,0 +1,171 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+  display: grid;
+  place-items: center;
+}
+
+.card-feature-container {
+  margin: 60px 0px;
+  padding: 0px 20px;
+  max-width: 75rem;
+}
+
+.card-feature__header {
+  max-width: 32.8rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.card-feature__title--light {
+  color: hsl(234, 12%, 34%);
+  font-weight: 200;
+}
+.card-feature__title--bold {
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+}
+.card-feature__description {
+  color: hsl(229, 6%, 66%);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.card-feature__card-logo {
+  display: flex;
+  justify-content: right;
+}
+.card-feature__grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 50px;
+}
+.card-feature__item-title {
+  font-size: 1.2rem;
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+}
+.card-feature__item-description {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 30px;
+}
+.card-feature__item {
+  background-color: white;
+  padding: 2rem 1.7rem;
+  box-shadow: 0 1rem 2rem 0.5rem #dedede;
+  border-radius: 0.5rem;
+}
+.card-feature__item--team-builder {
+  border-top: 5px solid hsl(0, 78%, 62%);
+}
+.card-feature__item--supervisor {
+  border-top: 5px solid hsl(180, 62%, 55%);
+}
+.card-feature__item--karma {
+  border-top: 5px solid hsl(34, 97%, 64%);
+}
+.card-feature__item--calculator {
+  border-top: 5px solid hsl(212, 86%, 64%);
+}
+@media screen and (min-width: 640px) {
+  .card-feature__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card-feature__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "start mid1 end" "start mid2 end";
+  }
+  .card-feature__grid .card-feature__item--team-builder {
+    grid-area: mid1;
+  }
+  .card-feature__grid .card-feature__item--supervisor {
+    grid-area: start;
+    align-self: center;
+  }
+  .card-feature__grid .card-feature__item--karma {
+    grid-area: mid2;
+  }
+  .card-feature__grid .card-feature__item--calculator {
+    grid-area: end;
+    align-self: center;
+  }
+  .card-feature__item {
+    padding: 1.7rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,5 @@
+// _mixins.scss
+
+@mixin border-top($width: 1px, $style: solid, $color: black) {
+  border-top: $width $style $color;
+}

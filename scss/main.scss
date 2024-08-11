@@ -1,0 +1,125 @@
+@use "reset";
+@use "variables" as *;
+@use "mixins" as *;
+
+body {
+  font-family: $primary-font;
+  background-color: #fafafa;
+  display: grid;
+  place-items: center;
+}
+
+.card-feature-container {
+  margin: 60px 0px;
+  padding: 0px 20px;
+  max-width: 75rem;
+}
+
+.card-feature {
+  &__header {
+    max-width: 32.8rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    &--light {
+      color: $neutral-very-dark-blue;
+      font-weight: $font-weight-light;
+    }
+    &--bold {
+      font-weight: $font-weight-bold;
+      color: $neutral-very-dark-blue;
+    }
+  }
+
+  &__description {
+    color: $neutral-grayish-blue;
+    font-size: 1rem;
+    font-weight: $font-weight-regular;
+    margin-top: 10px;
+  }
+
+  &__card-logo {
+    display: flex;
+    justify-content: right;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 50px;
+  }
+
+  &__item-title {
+    font-size: 1.2rem;
+    color: $neutral-very-dark-blue;
+    font-weight: $font-weight-bold;
+  }
+
+  &__item-description {
+    font-size: 0.8rem;
+    font-weight: $font-weight-regular;
+    color: $neutral-grayish-blue;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    background-color: white;
+    padding: 2rem 1.7rem;
+    box-shadow: 0 1rem 2rem 0.5rem #dedede;
+    border-radius: 0.5rem;
+    &--team-builder {
+      @include border-top(5px, solid, $primary-red);
+    }
+    &--supervisor {
+      @include border-top(5px, solid, $primary-cyan);
+    }
+    &--karma {
+      @include border-top(5px, solid, $primary-orange);
+    }
+    &--calculator {
+      @include border-top(5px, solid, $primary-blue);
+    }
+  }
+
+  //tablet
+  @media screen and (min-width: 640px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  //desktop
+  @media screen and (min-width: 1200px) {
+    &__grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      grid-template-areas:
+        "start mid1 end"
+        "start mid2 end";
+
+      .card-feature__item--team-builder {
+        grid-area: mid1;
+      }
+
+      .card-feature__item--supervisor {
+        grid-area: start;
+        align-self: center;
+      }
+
+      .card-feature__item--karma {
+        grid-area: mid2;
+      }
+
+      .card-feature__item--calculator {
+        grid-area: end;
+        align-self: center;
+      }
+    }
+    &__item {
+      padding: 1.7rem;
+    }
+  }
+}
